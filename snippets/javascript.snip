@@ -2,6 +2,7 @@ snippet var
   var ${1} = ${2}
 
 snippet require
+abbr    req
   require('${1}')${2}
 
 snippet Promise
@@ -15,13 +16,33 @@ snippet then
   })
 
 snippet task
+abbr    gt
   gulp.task('${1}', function () {
     ${2}
   });
-  ${3}
 
 snippet watch
+abbr    gw
   gulp.watch([${1}], ${2});
 
 snippet src
+abbr    gs
   gulp.src(${1})${2}
+
+snippet dest
+abbr    gd
+  gulp.dest('${1}')${2}
+
+snippet gulp-default
+abbr    gdef
+  gulp.task('default', [${1}]);
+
+snippet describe
+  describe('${1}', function () {
+    ${2}
+  });
+
+snippet it
+  it('${1}', function () {
+    ${2}
+  });
