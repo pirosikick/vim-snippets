@@ -1,24 +1,44 @@
+snippet xhr
+  var xhr= new XMLHttpRequest();
+  xhr.open('${1:GET}', '${2:/}' true);
+  xhr.onload = function (e) {
+    ${3};
+  };
+  xhr.send();
+
+snippet ce
+  document.createElement('${1}');
+
+snippet gid
+  document.getElementById('${1}');
+
+snippet qry
+  document.querySelector('${1}');
+
+snippet qrya
+  document.querySelectorAll('${1}');
+
 snippet var
   var ${1} = ${2}
 
 snippet require
 abbr    req
-  require('${1}')${2}
+  require('${1}')
 
 snippet Promise
   new Promise(function (resolve, reject) {
-    ${1}
+    ${1:// do something}
   });
 
 snippet then
   then(function (${1}) {
-    ${2}
+    ${2:// do something}
   })
 
 snippet task
 abbr    gt
   gulp.task('${1}', function () {
-    ${2}
+    ${2:// do something}
   });
 
 snippet watch
@@ -27,11 +47,11 @@ abbr    gw
 
 snippet src
 abbr    gs
-  gulp.src(${1})${2}
+  gulp.src(${1})
 
 snippet dest
 abbr    gd
-  gulp.dest('${1}')${2}
+  gulp.dest('${1}')
 
 snippet gulp-default
 abbr    gdef
@@ -39,10 +59,10 @@ abbr    gdef
 
 snippet describe
   describe('${1}', function () {
-    ${2}
+    ${2:// do something}
   });
 
 snippet it
   it('${1}', function () {
-    ${2}
+    ${2:assert(1 === 1);}
   });
