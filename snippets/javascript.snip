@@ -66,11 +66,16 @@ abbr    gdef
   gulp.task('default', [${1}]);
 
 snippet describe
-  describe('${1}', function () {
+  describe('${1}', () => {
     ${2:// do something}
   });
 
 snippet it
-  it('${1}', function () {
+  it('${1}', () => {
     ${2:assert(1 === 1);}
   });
+
+snippert afun
+  (${1}) => {
+    ${2:// do something}
+  }
