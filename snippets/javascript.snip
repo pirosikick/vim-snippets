@@ -7,31 +7,34 @@ snippet xhr
   xhr.send();
 
 snippet ce
-  document.createElement('${1}');
+  document.createElement('${1}
 
 snippet gid
-  document.getElementById('${1}');
+  document.getElementById('${1}
 
 snippet qry
-  document.querySelector('${1}');
+  document.querySelector('${1}
 
 snippet qrya
-  document.querySelectorAll('${1}');
+  document.querySelectorAll('${1}
   
 snippet body
   document.body
 
 snippet ac
-  appendChild('${1}')
+  appendChild('${1}
 
 snippet var
   var ${1} = ${2}
 
 snippet log
-  console.log(${1});
+  console.log(${1}
 
 snippet req
-  require('${1}')
+  require('${1}
+
+snippet req2
+  var ${1} = require('${2}
 
 snippet Promise
   new Promise(function (resolve, reject) {
@@ -66,22 +69,83 @@ abbr    gdef
   gulp.task('default', [${1}]);
 
 snippet describe
+abbr des
   describe('${1}', () => {
     ${2:// do something}
   });
 
-snippet it
-  it('${1}', () => {
-    ${2:assert(1 === 1);}
+snippet describe2
+abbr des2
+  describe('${1}', function () {
+    ${2:// do something}
   });
 
-snippert afun
+snippet it
+  it('${1}', (${2:done}) => {
+    ${3:assert(1 === 1);}
+  });
+
+snippet it2
+  it('${1}', function (${2:done})  {
+    ${3:assert(1 === 1);}
+  });
+
+snippet before
+abbr bf
+  before(() => {
+    this.${1} 
+  });
+
+snippet before2
+abbr bf2
+  before(function () {
+    this.${1} 
+  });
+
+snippet beforeEach
+abbr bfe
+  beforeEach(() => {
+    this.${1} 
+  });
+
+snippet beforeEach2
+abbr bfe2
+  beforeEach(function () {
+    this.${1} 
+  });
+
+snippet after
+abbr af
+  after(() => {
+    this.${1} 
+  });
+
+snippet after2
+abbr af2
+  after(function () {
+    this.${1} 
+  });
+
+snippet afterEach
+abbr afe
+  afterEach(() => {
+    this.${1}
+  });
+
+snippet afterEach2
+abbr afe2
+  afterEach(function () {
+    this.${1}
+  });
+
+
+snippet afun
   (${1}) => {
     ${2:// do something}
   }
 
 snippet import
-  import ${1} from "${2}"
+  import ${1} from '${2}
 
-snippet export
-  export ${1}
+snippet exd
+  export default ${1}
