@@ -139,6 +139,19 @@ abbr afe2
   });
 
 
+snippet context
+abbr ctx
+  context("${1}", () => {
+    ${2:it};
+  });
+
+snippet context2
+abbr ctx2
+  context("${1}", function () {
+    ${2:it2};
+  });
+
+
 snippet afun
   (${1}) => {
     ${2:// do something}
