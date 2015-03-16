@@ -31,13 +31,13 @@ snippet log
   console.log(${1}
 
 snippet req
-  require('${1}
-
-snippet req2
   var ${1} = require('${2}
 
+snippet req2
+  require('${1}
+
 snippet Promise
-  new Promise(function (resolve, reject) {
+  new Promise((resolve, reject) => {
     ${1:// do something}
   });
 
@@ -48,21 +48,21 @@ snippet then
 
 snippet task
 abbr    gt
-  gulp.task('${1}', function () {
+  gulp.task('${1}', [${2}], () => {
     ${2:// do something}
   });
 
 snippet watch
 abbr    gw
-  gulp.watch([${1}], ${2});
+  gulp.watch([${1}], ['${2}
 
 snippet src
 abbr    gs
-  gulp.src(${1})
+  gulp.src('${1}
 
 snippet dest
 abbr    gd
-  gulp.dest('${1}')
+  gulp.dest('${1}
 
 snippet gulp-default
 abbr    gdef
