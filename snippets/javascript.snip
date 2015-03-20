@@ -17,7 +17,7 @@ snippet qry
 
 snippet qrya
   document.querySelectorAll('${1}
-  
+
 snippet body
   document.body
 
@@ -37,7 +37,7 @@ snippet req2
   require('${1}
 
 snippet Promise
-  new Promise((resolve, reject) => {
+  Promise(function (resolve, reject) {
     ${1:// do something}
   });
 
@@ -47,110 +47,56 @@ snippet then
   })
 
 snippet task
-abbr    gt
-  gulp.task('${1}', [${2}], () => {
-    ${2:// do something}
+  gulp.task('${1}', [${2}], function () {
+    ${3:// do something}
   });
 
 snippet watch
-abbr    gw
   gulp.watch([${1}], ['${2}
 
 snippet src
-abbr    gs
   gulp.src('${1}
 
 snippet dest
-abbr    gd
   gulp.dest('${1}
 
 snippet gulp-default
-abbr    gdef
   gulp.task('default', [${1}]);
 
 snippet describe
-abbr des
-  describe('${1}', () => {
-    ${2:// do something}
-  });
-
-snippet describe2
-abbr des2
   describe('${1}', function () {
     ${2:// do something}
   });
 
 snippet it
-  it('${1}', (${2:done}) => {
-    ${3:assert(1 === 1);}
-  });
-
-snippet it2
   it('${1}', function (${2:done})  {
     ${3:assert(1 === 1);}
   });
 
 snippet before
-abbr bf
-  before(() => {
-    this.${1} 
-  });
-
-snippet before2
-abbr bf2
   before(function () {
-    this.${1} 
-  });
-
-snippet beforeEach
-abbr bfe
-  beforeEach(() => {
-    this.${1} 
-  });
-
-snippet beforeEach2
-abbr bfe2
-  beforeEach(function () {
-    this.${1} 
-  });
-
-snippet after
-abbr af
-  after(() => {
-    this.${1} 
-  });
-
-snippet after2
-abbr af2
-  after(function () {
-    this.${1} 
-  });
-
-snippet afterEach
-abbr afe
-  afterEach(() => {
     this.${1}
   });
 
-snippet afterEach2
-abbr afe2
+snippet beforeEach
+  beforeEach(function () {
+    this.${1}
+  });
+
+snippet after
+  after(function () {
+    this.${1}
+  });
+
+snippet afterEach
   afterEach(function () {
     this.${1}
   });
 
-
 snippet context
-abbr ctx
-  context("${1}", () => {
-    ${2:it};
-  });
-
-snippet context2
-abbr ctx2
   context("${1}", function () {
-    ${2:it2};
+    ${2}
   });
-
 
 snippet afun
   (${1}) => {
