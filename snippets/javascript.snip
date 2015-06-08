@@ -36,18 +36,13 @@ snippet req
 snippet req2
   require('${1}
 
-snippet Promise
-  Promise(function (resolve, reject) {
-    ${1:// do something}
-  });
-
 snippet then
   then(function (${1}) {
     ${2:// do something}
   })
 
 snippet task
-  gulp.task('${1}', [${2}], function () {
+  gulp.task('${1}', [${2}], () => {
     ${3:// do something}
   });
 
