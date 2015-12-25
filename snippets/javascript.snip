@@ -1,28 +1,28 @@
 snippet xhr
   let xhr= new XMLHttpRequest();
-  xhr.open("${1:GET}", "${2:/}" true);
+  xhr.open('${1:GET}', '${2:/}' true);
   xhr.onload = function (e) {
     ${3};
   };
   xhr.send();
 
 snippet ce
-  document.createElement("${1}
+  document.createElement('${1}
 
 snippet gid
-  document.getElementById("${1}
+  document.getElementById('${1}
 
 snippet qry
-  document.querySelector("${1}
+  document.querySelector('${1}
 
 snippet qrya
-  document.querySelectorAll("${1}
+  document.querySelectorAll('${1}
 
 snippet body
   document.body
 
 snippet ac
-  appendChild("${1}
+  appendChild('${1}
 
 snippet let
   let ${1} = ${2}
@@ -37,10 +37,10 @@ snippet log
   console.log(${1}
 
 snippet req
-  const ${1} = require("${2}
+  const ${1} = require('${2}
 
 snippet req2
-  require("${1}
+  require('${1}
 
 snippet then
   then(function (${1}) {
@@ -48,29 +48,29 @@ snippet then
   })
 
 snippet task
-  gulp.task("${1}", [${2}], () => {
+  gulp.task('${1}', [${2}], () => {
     ${3:// do something}
   });
 
 snippet watch
-  gulp.watch([${1}], ["${2}
+  gulp.watch([${1}], ['${2}
 
 snippet src
-  gulp.src("${1}
+  gulp.src('${1}
 
 snippet dest
-  gulp.dest("${1}
+  gulp.dest('${1}
 
 snippet gulp-default
-  gulp.task("default", [${1}]);
+  gulp.task('default', [${1}]);
 
 snippet describe
-  describe("${1}", function () {
+  describe('${1}', function () {
     ${2:// do something}
   });
 
 snippet it
-  it("${1}", function (${2:done})  {
+  it('${1}', function (${2:done})  {
     ${3:assert(1 === 1);}
   });
 
@@ -95,7 +95,7 @@ snippet afterEach
   });
 
 snippet context
-  context("${1}", function () {
+  context('${1}', function () {
     ${2}
   });
 
@@ -105,7 +105,7 @@ snippet afun
   }
 
 snippet import
-  import ${1} from "${2}
+  import ${1} from '${2}
 
 snippet exd
   export default ${1}
