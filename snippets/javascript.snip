@@ -24,9 +24,6 @@ snippet body
 snippet ac
   appendChild('${1}
 
-snippet let
-  let ${1} = ${2}
-
 snippet const
   const ${1} = ${2}
 
@@ -36,11 +33,17 @@ snippet let
 snippet log
   console.log(${1}
 
-snippet req
+snippet require1
+abbr rq1
   const ${1} = require('${2}
 
-snippet req2
+snippet require2
+abbr rq2
   require('${1}
+
+snippet require-path
+abbr rqp
+  const path = require('path');${1}
 
 snippet then
   then(function (${1}) {
@@ -48,8 +51,8 @@ snippet then
   })
 
 snippet task
-  gulp.task('${1}', [${2}], () => {
-    ${3:// do something}
+  gulp.task('${1}', ${2:[], }() => {
+    ${4}
   });
 
 snippet watch
@@ -105,7 +108,43 @@ snippet afun
   }
 
 snippet import
+abbr imp
   import ${1} from '${2}
+
+snippet import-all
+abbr impa
+  import * as ${1} from '${2}
+
+snippet import-part
+abbr impp
+  import { ${1} } from '${2}
+
+snippet import-part
+abbr impp
+  import { ${1} } from '${2}
+
+snippet import-ava
+abbr impava
+  import test from 'ava';${1}
+
+snippet import-react
+  import React${1} from 'react';${2}
 
 snippet exd
   export default ${1}
+
+delete path
+
+snippet eslint-disable
+abbr lintd
+  /* eslint-disable ${1}
+
+snippet eslint-disable-line
+abbr lintdl
+  // eslint-disable-line${1}
+
+snippet ava-test
+abbr avt
+  test('${1}', t => {
+    ${2}
+  });
